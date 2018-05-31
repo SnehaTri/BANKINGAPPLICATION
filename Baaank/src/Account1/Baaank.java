@@ -28,13 +28,21 @@ import java.util.ArrayList;
 
     
 }
+/**
+ * our main class bank
+ * @author Inspi
+ */
 public class Baaank {
     
     
     static ArrayList<Account1> customers=new ArrayList();
     static int count=0;
     
-    
+    /**
+     * This method creates a new account by asking for the name of the account holder and add it to the array list holding all customers' account objects.
+     * Thereby a single customer can have multiple accounts each time it asks for a new account it simply declares with the same name.
+     * @param accName Name of the account holder
+     */
     public static void addAccount(String accName)
     {
         //customers[count].name=accNum;
