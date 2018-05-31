@@ -163,23 +163,23 @@ public class Baaank {
      * This method withdraws the money from the specified account.
      * @param accountNumber Account number of customer.
      */
-         public static void withdraw(int accountNumber)
+    public static void withdraw(int accountNumber)
     {
-                int amount;
-               if( accountNumber<count && customers.get(accountNumber).name!= null )
-               {
-                   System.out.println("Enter the amount to withdraw\n");
-                   Scanner s1=new Scanner(System.in);
-                     amount=s1.nextInt(); 
-                     if(customers.get(accountNumber).balance>=amount)
-                     {
-                         customers.get(accountNumber).balance-=amount;
-                     }
-                     else
-                         System.out.println("Insufficient funds\n");
-               }
-               else
-                  System.out.println("Account not found\n");
+        int amount;
+        if( accountNumber<count && customers.get(accountNumber).name!= null )
+        {
+            System.out.println("Enter the amount to withdraw\n");
+            Scanner s1=new Scanner(System.in);
+            amount=s1.nextInt(); 
+            if(customers.get(accountNumber).balance>=amount)
+            {
+                customers.get(accountNumber).balance-=amount;
+            }
+            else
+                System.out.println("Insufficient funds\n");
+        }
+        else
+            System.out.println("Account not found\n");
     } 
          
        /**
