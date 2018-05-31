@@ -126,7 +126,10 @@ public class Baaank {
                            System.out.println("The richest person is:"+ customers.get(accountNumber).name + "\n balance:" +customers.get(accountNumber).balance);
                            
     }
-    
+    /**
+     * The method displays the available money in the account
+     * @param accountNumber 
+     */
     public static void showBalance(int accountNumber)
     {
         if(accountNumber<count && customers.get(accountNumber).name!=null)
