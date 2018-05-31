@@ -1,16 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Account1;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-/**
- *
- * @author Inspi
- */
+
  class Account1 {
     
         
@@ -30,7 +23,7 @@ import java.util.ArrayList;
 public class Baaank {
     
     
-        static ArrayList<Account1> customers=new ArrayList();
+    static ArrayList<Account1> customers=new ArrayList();
     static int count=0;
     
     
@@ -55,18 +48,18 @@ public class Baaank {
         Scanner s=new Scanner(System.in);
         System.out.println("Enter your choice\n");
         System.out.println("1:Add account\n");
-        System.out.println("2:Deposite Money\n");
-        System.out.println("3:Withdraw Money\n");
-        System.out.println("4:Transfer Money\n");
-        System.out.println("5:Show balance\n");
-        System.out.println("6:Show Richest person\n");
+        System.out.println("2:Deposit money\n");
+        System.out.println("3:Withdraw money\n");
+        System.out.println("4:Transfer money\n");
+        System.out.println("5:Check balance\n");
+        System.out.println("6:Show the richest person:\n");
         System.out.println("7:Exit\n");
         
         choice=s.nextInt();
         
         switch(choice)
         {
-            case 1:        System.out.println("Enter your name\n");
+            case 1:        System.out.println("Enter your name:\n");
                            name=s.next();
                            addAccount(name);
                            break;
@@ -181,12 +174,6 @@ public class Baaank {
                }
                else
                   System.out.println("Account not found\n");
-    
-
-    /**
-     * @param args the command line arguments
-     */
-    
     
 }
     
