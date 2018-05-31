@@ -145,18 +145,18 @@ public class Baaank {
      * This method will deposit the money into the specified account by adding the asked amount to the available amount.
      * @param accountNumber Account number of customer.
      */
-      public static void deposit(int accountNumber)
+    public static void deposit(int accountNumber)
     {
-                int amount;
-               if(accountNumber<count && customers.get(accountNumber).name!= null)
-               {
-                   System.out.println("Enter the amount to deposite\n");
-                   Scanner s1=new Scanner(System.in);
-                     amount=s1.nextInt(); 
-                     customers.get(accountNumber).balance+=amount;
-               }
-               else
-                  System.out.println("Account not found\n");
+        int amount;
+        if(accountNumber<count && customers.get(accountNumber).name!= null)
+        {
+            System.out.println("Enter the amount to deposite\n");
+            Scanner s1=new Scanner(System.in);
+            amount=s1.nextInt(); 
+            customers.get(accountNumber).balance+=amount;
+        }
+        else
+        System.out.println("Account not found\n");
     }
       
        /**
