@@ -109,7 +109,9 @@ public class Baaank {
         } 
         }
     }
-
+    /**
+     * Method displays the richest person in the bank along with its account balance.
+     */
     public static void showRichestPerson()
     {
         int maximumBalance=0,accountNumber=-1;
