@@ -186,32 +186,31 @@ public class Baaank {
      * This method transfers money from one account to other.
      * @param accountNumber1 account number of sender
      * @param accountNumber2 account number of receiver
-     */    
-                 public static void transfer(int accountNumber1,int accountNumber2)
+     */
+    public static void transfer(int accountNumber1,int accountNumber2)
     {
-                int amount;
-               if(accountNumber1<count && customers.get(accountNumber1).name!= null )
-               {
-                   System.out.println("Enter the amount to transfer\n");
-                   Scanner s1=new Scanner(System.in);
-                     amount=s1.nextInt(); 
-                     if(customers.get(accountNumber1).balance>=amount)
-                     {
-                         if(accountNumber2<count && customers.get(accountNumber2).name!= null )
-                         {
-                             customers.get(accountNumber1).balance-=amount;
-                             customers.get(accountNumber2).balance+=amount;
-                         }
-                         else
-                             System.out.println("Account 2 not found\n");
-                     }
-                     else
-                         System.out.println("Insufficient funds\n");
-               }
-               else
-                  System.out.println("Account not found\n");
-    
-}
+        int amount;
+        if(accountNumber1<count && customers.get(accountNumber1).name!= null )
+        {
+            System.out.println("Enter the amount to transfer\n");
+            Scanner s1=new Scanner(System.in);
+            amount=s1.nextInt(); 
+            if(customers.get(accountNumber1).balance>=amount)
+            {
+                if(accountNumber2<count && customers.get(accountNumber2).name!= null )
+                {
+                    customers.get(accountNumber1).balance-=amount;
+                    customers.get(accountNumber2).balance+=amount;
+                }
+                else
+                    System.out.println("Account 2 not found\n");
+            }
+            else
+                System.out.println("Insufficient funds\n");
+        }
+        else
+            System.out.println("Account not found\n");
+    }
     
     
 }
