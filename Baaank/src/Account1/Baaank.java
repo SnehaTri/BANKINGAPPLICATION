@@ -84,7 +84,7 @@ public class Baaank {
                            
             case 2:        System.out.println("Enter your Account number\n");
                            accountNumber1=s.nextInt();
-                           deposite(accountNumber1);
+                           deposit(accountNumber1);
                            break;
                            
             case 3:        System.out.println("Enter your Account number\n");
@@ -128,7 +128,7 @@ public class Baaank {
     }
     /**
      * The method displays the available money in the account
-     * @param accountNumber 
+     * @param accountNumber Account number of user
      */
     public static void showBalance(int accountNumber)
     {
@@ -140,7 +140,11 @@ public class Baaank {
                                System.out.println("Account not found\n");
     }
     
-      public static void deposite(int accountNumber)
+    /**
+     * This method will deposit the money into the specified account by adding the asked amount to the available amount.
+     * @param accountNumber Account number of customer.
+     */
+      public static void deposit(int accountNumber)
     {
                 int amount;
                if(accountNumber<count && customers.get(accountNumber).name!= null)
@@ -154,6 +158,10 @@ public class Baaank {
                   System.out.println("Account not found\n");
     }
       
+       /**
+     * This method withdraws the money from the specified account.
+     * @param accountNumber Account number of customer.
+     */
          public static void withdraw(int accountNumber)
     {
                 int amount;
@@ -173,7 +181,11 @@ public class Baaank {
                   System.out.println("Account not found\n");
     } 
          
-         
+       /**
+     * This method transfers money from one account to other.
+     * @param accountNumber1 account number of sender
+     * @param accountNumber2 account number of receiver
+     */    
                  public static void transfer(int accountNumber1,int accountNumber2)
     {
                 int amount;
