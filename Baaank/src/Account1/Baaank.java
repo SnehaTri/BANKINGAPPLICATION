@@ -116,15 +116,15 @@ public class Baaank {
     public static void showRichestPerson()
     {
         int maximumBalance=0,accountNumber=-1;
-                           for(int h=0; h<count; h++)
-                           {
-                               if(customers.get(h).balance>maximumBalance)
-                               {
-                                   maximumBalance=customers.get(h).balance;
-                                   accountNumber=h;
-                               }
-                           }
-                           System.out.println("The richest person is:"+ customers.get(accountNumber).name + "\n balance:" +customers.get(accountNumber).balance);
+            for(int h=0; h<count; h++)
+            {
+                if(customers.get(h).balance>maximumBalance)
+                {
+                    maximumBalance=customers.get(h).balance;
+                    accountNumber=h;
+                }
+            }
+        System.out.println("The richest person is:"+ customers.get(accountNumber).name + "\n balance:" +customers.get(accountNumber).balance);
                            
     }
     /**
@@ -134,11 +134,11 @@ public class Baaank {
     public static void showBalance(int accountNumber)
     {
         if(accountNumber<count && customers.get(accountNumber).name!=null)
-                           {
-                               System.out.println("balance:"+customers.get(accountNumber).balance);
-                           }
-                           else
-                               System.out.println("Account not found\n");
+        {
+            System.out.println("balance:"+customers.get(accountNumber).balance);
+        }
+        else
+            System.out.println("Account not found\n");
     }
     
     /**
