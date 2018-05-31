@@ -2,31 +2,28 @@
  * We are importing the packages of that of class Account1 which is shown in the program Account1.java, 
  * java.util.Scanner in order to scan the inputs from the user and java.util.ArrayList respectively
  */
+
 package Account1;
 import java.util.Scanner;
 import java.util.ArrayList;
 
 /**
- *
- * The class which holds all the details related to account of a user
+ *The class which holds all the details related to account of a user
  */
- class Account1 {
+class Account1 {
     
         
-    int balance;
-    String name;
+        int balance;
+        String name;
     
   /**
      * Constructor to initialize the account name and balance
      */
-   public Account1()
+    public Account1()
     {
         this.name=null;
         this.balance=0;
     }
-
-
-    
 }
 /**
  * our main class bank
@@ -77,35 +74,39 @@ public class Baaank {
         
         switch(choice)
         {
-            case 1:        System.out.println("Enter your name:\n");
-                           name=s.next();
-                           addAccount(name);
-                           break;
+            case 1: System.out.println("Enter your name:\n");
+                    name=s.next();
+                    addAccount(name);
+                    break;
                            
-            case 2:        System.out.println("Enter your Account number\n");
-                           accountNumber1=s.nextInt();
-                           deposit(accountNumber1);
-                           break;
+            case 2: System.out.println("Enter your Account number\n");
+                    accountNumber1=s.nextInt();
+                    deposit(accountNumber1);
+                    break;
                            
-            case 3:        System.out.println("Enter your Account number\n");
-                           accountNumber1=s.nextInt();
-                           withdraw(accountNumber1);
-                           break;
+            case 3: System.out.println("Enter your Account number\n");
+                    accountNumber1=s.nextInt();
+                    withdraw(accountNumber1);
+                    break;
                            
-            case 4:        System.out.println("Enter 'from' Account number\n");
-                           accountNumber1=s.nextInt();
-                           System.out.println("Enter 'to' Account number\n");
-                           accountNumber2=s.nextInt();
-                           transfer(accountNumber1,accountNumber2);
-                           break; 
-            case 5:        System.out.println("Enter your Account number\n");
-                           accountNumber1=s.nextInt();
-                           showBalance(accountNumber1);
-                           break; 
-            case 6:        showRichestPerson();
-                           break;
-            case 7:        break;
-            default:       System.out.println("You entered an invalid choice\n");
+            case 4: System.out.println("Enter 'from' Account number\n");
+                    accountNumber1=s.nextInt();
+                    System.out.println("Enter 'to' Account number\n");
+                    accountNumber2=s.nextInt();
+                    transfer(accountNumber1,accountNumber2);
+                    break; 
+                    
+            case 5: System.out.println("Enter your Account number\n");
+                    accountNumber1=s.nextInt();
+                    showBalance(accountNumber1);
+                    break; 
+                    
+            case 6: showRichestPerson();
+                    break;
+                    
+            case 7: break;
+            
+           default: System.out.println("You entered an invalid choice\n");
         } 
         }
     }
