@@ -16,9 +16,9 @@ class Account1 {
         int balance;
         String name;
     
-  /**
-     * Constructor to initialize the account name and balance
-     */
+/**
+ * Constructor to initialize the account name and balance
+ */
     public Account1()
     {
         this.name=null;
@@ -35,11 +35,11 @@ public class Baaank {
     static ArrayList<Account1> customers=new ArrayList();
     static int count=0;
     
-    /**
-     * This method creates a new account by asking for the name of the account holder and add it to the array list holding all customers' account objects.
-     * Thereby a single customer can have multiple accounts each time it asks for a new account it simply declares with the same name.
-     * @param accName Name of the account holder
-     */
+/**
+ * This method creates a new account by asking for the name of the account holder and add it to the array list holding all customers' account objects.
+ * Thereby a single customer can have multiple accounts each time it asks for a new account it simply declares with the same name.
+ * @param accName Name of the account holder
+ */
     public static void addAccount(String accName)
     {
         //customers[count].name=accNum;
@@ -49,9 +49,9 @@ public class Baaank {
         System.out.println("Your account number is\n" + count++);
     }
     
-    /**
-     * The following method displays a menu for the user and takes the control to the respective fuction which is opted by the user.  
-    */
+/**
+ * The following method displays a menu for the user and takes the control to the respective fuction which is opted by the user.  
+ */
     public static void main(String[] args) {
        
         int choice=-1;
@@ -110,9 +110,9 @@ public class Baaank {
         } 
         }
     }
-    /**
-     * Method displays the richest person in the bank along with its account balance.
-     */
+/**
+ * Method displays the richest person in the bank along with its account balance.
+ */
     public static void showRichestPerson()
     {
         int maximumBalance=0,accountNumber=-1;
@@ -127,10 +127,10 @@ public class Baaank {
         System.out.println("The richest person is:"+ customers.get(accountNumber).name + "\n balance:" +customers.get(accountNumber).balance);
                            
     }
-    /**
-     * The method displays the available money in the account
-     * @param accountNumber Account number of user
-     */
+/**
+ * The method displays the available money in the account
+ * @param accountNumber Account number of user
+ */
     public static void showBalance(int accountNumber)
     {
         if(accountNumber<count && customers.get(accountNumber).name!=null)
@@ -141,10 +141,10 @@ public class Baaank {
             System.out.println("Account not found\n");
     }
     
-    /**
-     * This method will deposit the money into the specified account by adding the asked amount to the available amount.
-     * @param accountNumber Account number of customer.
-     */
+/**
+ * This method will deposit the money into the specified account by adding the asked amount to the available amount.
+ * @param accountNumber Account number of customer.
+ */
     public static void deposit(int accountNumber)
     {
         int amount;
@@ -159,10 +159,10 @@ public class Baaank {
         System.out.println("Account not found\n");
     }
       
-       /**
-     * This method withdraws the money from the specified account.
-     * @param accountNumber Account number of customer.
-     */
+/**
+ * This method withdraws the money from the specified account.
+ * @param accountNumber Account number of customer.
+ */
     public static void withdraw(int accountNumber)
     {
         int amount;
@@ -182,11 +182,11 @@ public class Baaank {
             System.out.println("Account not found\n");
     } 
          
-       /**
-     * This method transfers money from one account to other.
-     * @param accountNumber1 account number of sender
-     * @param accountNumber2 account number of receiver
-     */
+/**
+ * This method transfers money from one account to other.
+ * @param accountNumber1 account number of sender
+ * @param accountNumber2 account number of receiver
+ */
     public static void transfer(int accountNumber1,int accountNumber2)
     {
         int amount;
