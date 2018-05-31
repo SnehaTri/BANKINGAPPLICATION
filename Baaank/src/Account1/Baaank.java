@@ -52,7 +52,9 @@ public class Baaank {
         System.out.println("Your account number is\n" + count++);
     }
     
-    
+    /**
+     * The following method displays a menu for the user and takes the control to the respective fuction which is opted by the user.  
+    */
     public static void main(String[] args) {
        
         int choice=-1;
