@@ -1,16 +1,24 @@
-
+/**
+ * We are importing the packages of that of class Account1 which is shown in the program Account1.java, 
+ * java.util.Scanner in order to scan the inputs from the user and java.util.ArrayList respectively
+ */
 package Account1;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-
+/**
+ *
+ * The class which holds all the details related to account of a user
+ */
  class Account1 {
     
         
     int balance;
     String name;
     
-  
+  /**
+     * Constructor to initialize the account name and balance
+     */
    public Account1()
     {
         this.name=null;
