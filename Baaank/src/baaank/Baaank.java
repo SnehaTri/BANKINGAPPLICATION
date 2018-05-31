@@ -18,9 +18,7 @@ import java.util.ArrayList;
     int balance;
     String name;
     
-    /**
-     * Constructor to initialize the account name and balance
-     */
+  
    public Account1()
     {
         this.name=null;
@@ -37,11 +35,7 @@ public class Baaank {
         static ArrayList<Account1> customers=new ArrayList();
     static int count=0;
     
-    /**
-     * This method creates a new account by asking for the name of the account holder and add it to the array list holding all customers' account objects.
-     * Thereby a single customer can have multiple accounts each time it asks for a new account it simply declares with the same name.
-     * @param accName Name of the account holder
-     */
+    
     public static void addAccount(String accName)
     {
         //customers[count].name=accNum;
@@ -51,9 +45,7 @@ public class Baaank {
         System.out.println("Your account number is\n" + count++);
     }
     
-    /**
-     * The following method displays a menu for the user and takes the control to the respective fuction which is opted by the user.  
-    */
+    
     public static void main(String[] args) {
        
         int choice=-1;
@@ -73,6 +65,41 @@ public class Baaank {
         System.out.println("7:Exit\n");
         
         choice=s.nextInt();
+        
+        switch(choice)
+        {
+            case 1:        System.out.println("Enter your name\n");
+                           name=s.next();
+                           addAccount(name);
+                           break;
+                           
+            case 2:        System.out.println("Enter your Account number\n");
+                           accountNumber1=s.nextInt();
+                           deposite(accountNumber1);
+                           break;
+                           
+            case 3:        System.out.println("Enter your Account number\n");
+                           accountNumber1=s.nextInt();
+                           withdraw(accountNumber1);
+                           break;
+                           
+            case 4:        System.out.println("Enter 'from' Account number\n");
+                           accountNumber1=s.nextInt();
+                           System.out.println("Enter 'to' Account number\n");
+                           accountNumber2=s.nextInt();
+                           transfer(accountNumber1,accountNumber2);
+                           break; 
+            case 5:        System.out.println("Enter your Account number\n");
+                           accountNumber1=s.nextInt();
+                           showBalance(accountNumber1);
+                           break; 
+            case 6:        showRichestPerson();
+                           break;
+            case 7:        break;
+            default:       System.out.println("You entered an invalid choice\n");
+        } 
+        }
+    }
 
     /**
      * @param args the command line arguments
